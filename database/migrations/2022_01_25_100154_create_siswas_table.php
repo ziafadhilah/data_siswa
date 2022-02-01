@@ -31,9 +31,9 @@ class CreateSiswasTable extends Migration
             $table->string('alamat_1', 255);
             $table->string('alamat_2', 255);
             $table->string('alamat_3', 255)->nullable();
-            $table->integer('no_tlp_1');
-            $table->integer('no_tlp_2');
-            $table->integer('no_tlp_3')->nullable();
+            $table->bigInteger('no_tlp_1');
+            $table->bigInteger('no_tlp_2');
+            $table->bigInteger('no_tlp_3')->nullable();
             $table->string('sekolah_asal', 255);
             $table->date('pada_tanggal');
             $table->string('pekerjaan_ayah', 255);
