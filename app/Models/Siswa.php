@@ -33,4 +33,14 @@ class Siswa extends Model
         'tingkats_id',
         'jurusans_id',
     ];
+
+    public function jurusan()
+    {
+        return $this->belongsTo(Jurusan::class, 'jurusans_id');
+    }
+
+    public function tingkat()
+    {
+        return $this->belongsTo(Tingkat::class, 'tingkats_id');
+    }
 }

@@ -12,12 +12,12 @@
             <h3 style="color: aliceblue;">Daftar Jurusan</h3>
         </div>
     </div>
-    <div class="card-body" mt-3>
+    <div class="card-body">
         <a href="{{url('/jurusan/create')}}" class="btn btn-outline-success">Tambah Jurusan</a>
     </div>
     <table class="table table-striped">
         <thead>
-            <tr style="text-align: center;">
+            <tr class="text-center">
                 <th scope="col" width="5%">No.</th>
                 <th scope="col" width="30%">Nama Jurusan</th>
                 <th scope="col" width="20%">#</th>
@@ -25,15 +25,15 @@
         </thead>
         <tbody>
             @foreach($jurusans as $jurusan)
-            <tr style="text-align: center;">
+            <tr class="text-center">
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$jurusan->nama}}</td>
                 <td>
-                    <a href="/jurusan/{{$jurusan->id}}" class="btn btn-outline-warning">Edit</a>
+                    <a href="/jurusan/{{$jurusan->id}}" class="btn btn-outline-warning btn-sm">Edit</a>
                     <form action="/jurusan/{{$jurusan->id}}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
-                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Anda yakin mau menghapus?')">Delete</button>
+                        <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Anda yakin mau menghapus?')">Delete</button>
                     </form>
                 </td>
             </tr>
