@@ -12,7 +12,6 @@
     </div>
     <div class="container mt-3">
         <a href="{{url('/siswa/create')}}" class="btn btn-outline-success">Tambah Siswa</a>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente error iure et distinctio labore mollitia cupiditate, molestias aspernatur odio modi? Animi quas eum aspernatur sapiente odit commodi consequuntur id.
     </div>
     <table class="table table-sm mt-3">
         <thead>
